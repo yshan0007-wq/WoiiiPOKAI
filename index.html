@@ -1,78 +1,422 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
+
 <meta charset="UTF-8">
-<title>🚫 WOII POKAI !!! 🚫</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>🚨 WOII POKAI !!! 🚨</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+width:100%;
+height:100%;
+overflow:hidden;
+font-family:Arial,Helvetica,sans-serif;
+}
+
 body{
-    margin:0;
-    background:#111;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    font-family:Arial, sans-serif;
+
+display:flex;
+justify-content:center;
+align-items:center;
+background:#000;
+animation:police .35s infinite;
+position:relative;
+
+}
+
+@keyframes police{
+
+0%{
+background:#7a0000;
+}
+
+25%{
+background:#001d70;
+}
+
+50%{
+background:#b40000;
+}
+
+75%{
+background:#0038d6;
+}
+
+100%{
+background:#7a0000;
+}
+
 }
 
 .box{
-    background:white;
-    width:800px;
-    padding:50px;
-    border-radius:25px;
-    text-align:center;
-    box-shadow:0 0 30px rgba(0,0,0,.4);
+
+position:relative;
+
+z-index:10;
+
+background:rgba(255,255,255,.96);
+
+padding:55px;
+
+border-radius:30px;
+
+width:900px;
+
+max-width:92%;
+
+text-align:center;
+
+box-shadow:0 0 60px #000;
+
+animation:popup 1s infinite alternate;
+
+}
+
+@keyframes popup{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.03);
+
+}
+
 }
 
 h1{
-    color:red;
-    font-size:58px;
-    font-weight:bold;
-    margin-bottom:30px;
+
+font-size:72px;
+
+color:red;
+
+font-weight:bold;
+
+letter-spacing:3px;
+
+margin-bottom:30px;
+
+text-shadow:
+0 0 15px red,
+0 0 30px red,
+0 0 50px red;
+
+animation:shake .18s infinite;
+
+}
+
+@keyframes shake{
+
+0%{transform:translateX(-6px);}
+
+25%{transform:translateX(6px);}
+
+50%{transform:translateY(-4px);}
+
+75%{transform:translateX(4px);}
+
+100%{transform:translateX(-6px);}
+
 }
 
 p{
-    font-size:32px;
-    line-height:1.8;
-    font-weight:bold;
+
+font-size:30px;
+
+font-weight:bold;
+
+line-height:1.8;
+
+color:#111;
+
+}
+
+.red{
+
+color:red;
+
+font-size:38px;
+
 }
 
 button{
-    margin-top:30px;
-    padding:15px 40px;
-    font-size:28px;
-    border:none;
-    border-radius:12px;
-    background:red;
-    color:white;
-    cursor:pointer;
+
+margin-top:35px;
+
+font-size:30px;
+
+padding:18px 42px;
+
+background:#00a651;
+
+color:white;
+
+border:none;
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:.2s;
+
 }
+
+button:hover{
+
+transform:scale(1.08);
+
+background:#008943;
+
+}
+
+.small{
+
+margin-top:20px;
+
+font-size:18px;
+
+color:#666;
+
+}
+
+.flash{
+
+position:absolute;
+
+width:300px;
+
+height:300px;
+
+border-radius:50%;
+
+background:white;
+
+filter:blur(100px);
+
+opacity:.18;
+
+animation:flash 1s infinite;
+
+}
+
+@keyframes flash{
+
+0%{opacity:0;}
+
+50%{opacity:.35;}
+
+100%{opacity:0;}
+
+}
+    .flash2{
+
+position:absolute;
+
+right:-120px;
+
+top:-120px;
+
+width:280px;
+
+height:280px;
+
+border-radius:50%;
+
+background:#4da6ff;
+
+filter:blur(120px);
+
+opacity:.2;
+
+animation:flash2 1s infinite;
+
+}
+
+@keyframes flash2{
+
+0%{opacity:0;}
+
+50%{opacity:.4;}
+
+100%{opacity:0;}
+
+}
+
+.float{
+
+position:absolute;
+
+font-size:70px;
+
+animation:float 6s linear infinite;
+
+opacity:.7;
+
+user-select:none;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(110vh) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(-120vh) rotate(360deg);
+
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
 
+<div class="flash"></div>
+
+<div class="flash2"></div>
+
+<div class="float" style="left:5%;animation-delay:0s;">🚨</div>
+<div class="float" style="left:18%;animation-delay:1s;">⚠️</div>
+<div class="float" style="left:35%;animation-delay:2s;">🚓</div>
+<div class="float" style="left:55%;animation-delay:3s;">🚨</div>
+<div class="float" style="left:72%;animation-delay:4s;">⚠️</div>
+<div class="float" style="left:90%;animation-delay:5s;">🚓</div>
+
 <div class="box">
 
-<h1>⚠️🚨 WOII POKAI !!! 🚫</h1>
+<h1>🚨 WOII POKAI !!! 🚨</h1>
 
 <p>
-做坏事又被我抓包！<br>
-到底想怎样你 😒<br><br>
 
-还要我跟你斗智斗勇是不是？🙄<br><br>
+做坏事又被我抓包！🤣<br><br>
 
-天天准时来这里报道。<br><br>
+到底想怎样你？😒<br><br>
 
-是不是要家法侍候？🙄<br><br>
+还要跟我斗智斗勇是不是？🙄<br><br>
 
-<strong>我就来跟你算账！😤</strong>
+天天准时来这里报道。🤡<br><br>
+
+<span class="red">
+
+是不是要家法侍候？👀
+
+</span>
+
+<br><br>
+
+我就来跟你算账！！😤
+
 </p>
 
-<button onclick="window.close()">我知道错了 😭</button>
+<button onclick="sorry()">
+
+😭 我知道错了
+
+</button>
+
+<div class="small">
+
+🔊 点击网页任意地方开始播放
 
 </div>
 
+</div>
+
+<audio id="alarm">
+
+<source src="alarmALERT.mp3" type="audio/mpeg">
+
+</audio>
+
+<audio id="voice">
+
+<source src="scold.mp3" type="audio/mpeg">
+
+</audio>
+
+<script>
+
+const alarm=document.getElementById("alarm");
+
+const voice=document.getElementById("voice");
+
+document.body.addEventListener("click",async()=>{
+
+try{
+
+await alarm.play();
+
+alarm.onended=function(){
+
+voice.play();
+
+}
+
+}catch(e){
+
+console.log(e);
+
+}
+
+},{once:true});
+
+function sorry(){
+
+    alert("我真的来跟你算账！");
+
+}
+
+setInterval(()=>{
+
+document.title=
+document.title==="🚨 WOII POKAI !!! 🚨"
+?
+"⚠️ 又被抓包啦！！⚠️"
+:
+"🚨 WOII POKAI !!! 🚨";
+
+},800);
+
+let shake=true;
+
+setInterval(()=>{
+
+if(shake){
+
+document.body.style.transform="translateX(4px)";
+
+}else{
+
+document.body.style.transform="translateX(-4px)";
+
+}
+
+shake=!shake;
+
+},80);
+
+</script>
+
 </body>
+
 </html>
