@@ -362,19 +362,19 @@ const voice=document.getElementById("voice");
 
 document.body.addEventListener("click",async()=>{
 
-try{
+try {
 
-await alarm.play();
+    await alarm.play();
 
-alarm.onended=function(){
+    setTimeout(function () {
 
-voice.play();
+        voice.play();
 
-}
+    }, 3000);
 
-}catch(e){
+} catch (e) {
 
-console.log(e);
+    console.log(e);
 
 }
 
