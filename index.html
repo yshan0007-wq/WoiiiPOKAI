@@ -368,9 +368,28 @@ try {
 
     setTimeout(function () {
 
+        let playCount = 0;
+
+voice.play();
+
+voice.onended = function () {
+
+    playCount++;
+
+    if (playCount < 2) {
+
+        voice.currentTime = 0;
         voice.play();
 
-    }, 3000);
+    } else {
+
+        voice.onended = null;
+
+    }
+
+};
+
+    }, 2000);
 
 } catch (e) {
 
